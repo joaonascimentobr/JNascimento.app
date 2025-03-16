@@ -23,11 +23,6 @@ Este repositório é uma coleção de recursos para quem está começando a prog
 3. **Faça suas alterações** e commit.
 4. **Envie um pull request**.
 
-**Licença:**
-
-Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.   
-
-
 **Agradecimentos:**
 
 Agradecemos a todos que contribuíram para este projeto!
