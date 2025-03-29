@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Radiciação</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #e74c3c;
+            margin-top: 30px;
+            border-left: 4px solid #e74c3c;
+            padding-left: 10px;
+        }
+        .exercise {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .math {
+            font-family: "Times New Roman", serif;
+            font-size: 1.2em;
+            background-color: #f0f0f0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e8f8f5;
+            border-left: 4px solid #2ecc71;
+            border-radius: 0 4px 4px 0;
+        }
+        .difficulty {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .easy {
+            background-color: #d5f5e3;
+            color: #27ae60;
+        }
+        .medium {
+            background-color: #fef9e7;
+            color: #f39c12;
+        }
+        .hard {
+            background-color: #fadbd8;
+            color: #e74c3c;
+        }
+        .tip {
+            font-style: italic;
+            color: #7f8c8d;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercícios de Radiciação</h1>
+    
+    <h2>Nível Básico</h2>
+    
+    <div class="exercise">
+        <p>1. Calcule a raiz quadrada de 144.</p>
+        <p class="tip">Dica: Qual número multiplicado por si mesmo resulta em 144?</p>
+        <button onclick="showAnswer(1)">Mostrar Resposta</button>
+        <div id="answer1" class="answer">
+            <span class="math">√144 = 12</span>, pois <span class="math">12 × 12 = 144</span>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p>2. Qual é o valor de <span class="math">³√125</span>?</p>
+        <button onclick="showAnswer(2)">Mostrar Resposta</button>
+        <div id="answer2" class="answer">
+            <span class="math">³√125 = 5</span>, porque <span class="math">5³ = 5 × 5 × 5 = 125</span>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p>3. Resolva: <span class="math">√81 + √16</span></p>
+        <button onclick="showAnswer(3)">Mostrar Resposta</button>
+        <div id="answer3" class="answer">
+            <span class="math">√81 = 9</span> e <span class="math">√16 = 4</span><br>
+            <span class="math">9 + 4 = 13</span>
+        </div>
+    </div>
+    
+    <h2>Nível Intermediário <span class="difficulty medium">Intermediário</span></h2>
+    
+    <div class="exercise">
+        <p>4. Calcule: <span class="math">√(9 + 16) × ³√27</span></p>
+        <button onclick="showAnswer(4)">Mostrar Resposta</button>
+        <div id="answer4" class="answer">
+            Primeiro resolva dentro do radical: <span class="math">9 + 16 = 25</span><br>
+            <span class="math">√25 = 5</span><br>
+            <span class="math">³√27 = 3</span><br>
+            Resultado: <span class="math">5 × 3 = 15</span>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p>5. Simplifique a expressão: <span class="math">√50</span></p>
+        <p class="tip">Dica: Fatore 50 em um quadrado perfeito vezes outro número.</p>
+        <button onclick="showAnswer(5)">Mostrar Resposta</button>
+        <div id="answer5" class="answer">
+            <span class="math">√50 = √(25 × 2) = √25 × √2 = 5√2</span>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p>6. Qual é o valor de <span class="math">⁴√(16) - ³√(-8)</span>?</p>
+        <button onclick="showAnswer(6)">Mostrar Resposta</button>
+        <div id="answer6" class="answer">
+            <span class="math">⁴√16 = 2</span> (pois <span class="math">2⁴ = 16</span>)<br>
+            <span class="math">³√(-8) = -2</span> (pois <span class="math">(-2)³ = -8</span>)<br>
+            Resultado: <span class="math">2 - (-2) = 4</span>
+        </div>
+    </div>
+    
+    <h2>Nível Avançado <span class="difficulty hard">Avançado</span></h2>
+    
+    <div class="exercise">
+        <p>7. Resolva a equação: <span class="math">√(x + 5) = 3</span></p>
+        <button onclick="showAnswer(7)">Mostrar Resposta</button>
+        <div id="answer7" class="answer">
+            Elevando ambos os lados ao quadrado:<br>
+            <span class="math">(√(x + 5))² = 3²</span><br>
+            <span class="math">x + 5 = 9</span><br>
+            <span class="math">x = 9 - 5</span><br>
+            <span class="math">x = 4</span>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p>8. Calcule: <span class="math">√(2√3 + 2) × √(2√3 - 2)</span></p>
+        <p class="tip">Dica: Use a propriedade √a × √b = √(a×b)</p>
+        <button onclick="showAnswer(8)">Mostrar Resposta</button>
+        <div id="answer8" class="answer">
+            Aplicando a propriedade:<br>
+            <span class="math">√[(2√3 + 2)(2√3 - 2)]</span><br>
+            Produto notável (a+b)(a-b) = a²-b²:<br>
+            <span class="math">= √[(2√3)² - (2)²] = √[4×3 - 4] = √[12 - 4] = √8</span><br>
+            Simplificando: <span class="math">√8 = 2√2</span>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <p>9. Determine o valor de <span class="math">√(9 + √(16 + √25))</span></p>
+        <button onclick="showAnswer(9)">Mostrar Resposta</button>
+        <div id="answer9" class="answer">
+            Resolvendo de dentro para fora:<br>
+            <span class="math">√25 = 5</span><br>
+            <span class="math">16 + 5 = 21</span><br>
+            <span class="math">√21 ≈ 4.583</span><br>
+            <span class="math">9 + 4.583 ≈ 13.583</span><br>
+            <span class="math">√13.583 ≈ 3.685</span><br>
+            Resposta exata: <span class="math">√(9 + √(16 + √25)) = √(9 + √21)</span>
+        </div>
+    </div>
+    
+    <script>
+        function showAnswer(number) {
+            const answer = document.getElementById(`answer${number}`);
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
