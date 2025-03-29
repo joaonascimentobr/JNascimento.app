@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Pensamento Funcional</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .exercise {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            border-left: 5px solid #3498db;
+        }
+        
+        .exercise h2 {
+            color: #2980b9;
+            margin-top: 0;
+        }
+        
+        .difficulty {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .easy {
+            background-color: #d5f5e3;
+            color: #27ae60;
+        }
+        
+        .medium {
+            background-color: #fef9e7;
+            color: #f39c12;
+        }
+        
+        .hard {
+            background-color: #fadbd8;
+            color: #e74c3c;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .answer {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f8f5;
+            border-radius: 5px;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .tip {
+            font-style: italic;
+            color: #7f8c8d;
+            border-left: 3px solid #9b59b6;
+            padding-left: 10px;
+            margin: 10px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercícios de Pensamento Funcional</h1>
+    
+    <div class="exercise">
+        <h2>1. Identificando Funções <span class="difficulty easy">Fácil</span></h2>
+        <p>Quais das seguintes situações representam relações funcionais?</p>
+        <ol type="a">
+            <li>A temperatura em função da hora do dia</li>
+            <li>O número de telefone em função do nome da pessoa</li>
+            <li>O time de futebol em função do nome do jogador</li>
+            <li>A área de um quadrado em função do seu lado</li>
+        </ol>
+        <button onclick="showAnswer(1)">Mostrar Resposta</button>
+        <div id="answer1" class="answer">
+            <p><strong>Resposta:</strong></p>
+            <p>a) <strong>É função</strong> - Cada hora tem uma temperatura específica<br>
+            b) <strong>É função</strong> - Cada nome tem um número único<br>
+            c) <strong>Não é função</strong> - Um jogador pode jogar em times diferentes em momentos distintos<br>
+            d) <strong>É função</strong> - Cada lado corresponde a uma única área (A = L²)</p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <h2>2. Análise de Tabela <span class="difficulty medium">Médio</span></h2>
+        <p>A tabela abaixo mostra a relação entre x e y. Esta relação representa uma função?</p>
+        <table>
+            <tr>
+                <th>x</th>
+                <th>y</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <button onclick="showAnswer(2)">Mostrar Resposta</button>
+        <div id="answer2" class="answer">
+            <p><strong>Resposta:</strong> Não é função, pois o valor x = 2 aparece duas vezes com resultados diferentes para y (5 e 4). Em uma função, cada entrada (x) deve ter apenas uma saída (y).</p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <h2>3. Expressão Verbal para Matemática <span class="difficulty medium">Médio</span></h2>
+        <p>Traduza as seguintes situações para notação funcional:</p>
+        <ol type="a">
+            <li>O dobro de um número mais cinco</li>
+            <li>A área de um círculo em função do raio</li>
+            <li>O preço total de compra de n notebooks que custam R$ 2500 cada</li>
+        </ol>
+        <div class="tip">Dica: Identifique a variável independente (entrada) e como ela se relaciona com o resultado (saída).</div>
+        <button onclick="showAnswer(3)">Mostrar Resposta</button>
+        <div id="answer3" class="answer">
+            <p><strong>Resposta:</strong></p>
+            <p>a) <code>f(x) = 2x + 5</code><br>
+            b) <code>A(r) = πr²</code><br>
+            c) <code>P(n) = 2500n</code></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <h2>4. Teste da Reta Vertical <span class="difficulty hard">Difícil</span></h2>
+        <p>Quais dos seguintes gráficos representam funções? Justifique.</p>
+        <img src="https://www.mathsisfun.com/algebra/images/function-graph.svg" alt="Gráfico 1" width="200" style="margin: 10px; border: 1px solid #ccc;">
+        <img src="https://www.mathsisfun.com/algebra/images/not-function.gif" alt="Gráfico 2" width="200" style="margin: 10px; border: 1px solid #ccc;">
+        <p class="tip">Lembre-se: Se uma reta vertical interceptar o gráfico mais de uma vez, não é função.</p>
+        <button onclick="showAnswer(4)">Mostrar Resposta</button>
+        <div id="answer4" class="answer">
+            <p><strong>Resposta:</strong></p>
+            <p><strong>Primeiro gráfico:</strong> É função, pois nenhuma reta vertical intercepta mais de uma vez.<br>
+            <strong>Segundo gráfico (círculo):</strong> Não é função, pois retas verticais no meio do círculo interceptam duas vezes.</p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <h2>5. Aplicação Prática <span class="difficulty hard">Difícil</span></h2>
+        <p>Uma empresa de táxi cobra R$ 5,00 de bandeirada mais R$ 2,50 por quilômetro rodado.</p>
+        <ol type="a">
+            <li>Escreva a função que representa o preço da corrida (P) em função da distância (d)</li>
+            <li>Calcule quanto custaria uma corrida de 12 km</li>
+            <li>Se um cliente pagou R$ 30,00, quantos km percorreu?</li>
+        </ol>
+        <button onclick="showAnswer(5)">Mostrar Resposta</button>
+        <div id="answer5" class="answer">
+            <p><strong>Resposta:</strong></p>
+            <p>a) <code>P(d) = 5 + 2.5d</code><br>
+            b) <code>P(12) = 5 + 2.5×12 = 5 + 30 = R$ 35,00</code><br>
+            c) <code>30 = 5 + 2.5d → 2.5d = 25 → d = 10 km</code></p>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <h2>6. Padrões Numéricos <span class="difficulty medium">Médio</span></h2>
+        <p>Complete a tabela abaixo para a função f(x) = x² - 3:</p>
+        <table>
+            <tr>
+                <th>x</th>
+                <th>-2</th>
+                <th>-1</th>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
+            </tr>
+            <tr>
+                <td>f(x)</td>
+                <td>?</td>
+                <td>?</td>
+                <td>?</td>
+                <td>?</td>
+                <td>?</td>
+            </tr>
+        </table>
+        <button onclick="showAnswer(6)">Mostrar Resposta</button>
+        <div id="answer6" class="answer">
+            <p><strong>Resposta:</strong></p>
+            <table>
+                <tr>
+                    <th>x</th>
+                    <th>-2</th>
+                    <th>-1</th>
+                    <th>0</th>
+                    <th>1</th>
+                    <th>2</th>
+                </tr>
+                <tr>
+                    <td>f(x)</td>
+                    <td>1</td>
+                    <td>-2</td>
+                    <td>-3</td>
+                    <td>-2</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <p>Cálculos: (-2)²-3=1, (-1)²-3=-2, (0)²-3=-3, etc.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Exercícios de Pensamento Funcional | Matemática Básica</p>
+    </footer>
+    
+    <script>
+        function showAnswer(number) {
+            const answer = document.getElementById(`answer${number}`);
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
