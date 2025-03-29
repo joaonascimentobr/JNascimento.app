@@ -4,118 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercícios de Pensamento Funcional</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fa;
-        }
-        
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-        }
-        
-        .exercise {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-            border-left: 5px solid #3498db;
-        }
-        
-        .exercise h2 {
-            color: #2980b9;
-            margin-top: 0;
-        }
-        
-        .difficulty {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-size: 0.8em;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-        
-        .easy {
-            background-color: #d5f5e3;
-            color: #27ae60;
-        }
-        
-        .medium {
-            background-color: #fef9e7;
-            color: #f39c12;
-        }
-        
-        .hard {
-            background-color: #fadbd8;
-            color: #e74c3c;
-        }
-        
-        button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background-color 0.3s;
-        }
-        
-        button:hover {
-            background-color: #2980b9;
-        }
-        
-        .answer {
-            display: none;
-            margin-top: 15px;
-            padding: 15px;
-            background-color: #e8f8f5;
-            border-radius: 5px;
-            border-left: 4px solid #2ecc71;
-        }
-        
-        .tip {
-            font-style: italic;
-            color: #7f8c8d;
-            border-left: 3px solid #9b59b6;
-            padding-left: 10px;
-            margin: 10px 0;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #7f8c8d;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Exercícios de Pensamento Funcional</h1>
@@ -187,18 +76,54 @@
             c) <code>P(n) = 2500n</code></p>
         </div>
     </div>
-    
     <div class="exercise">
         <h2>4. Teste da Reta Vertical <span class="difficulty hard">Difícil</span></h2>
         <p>Quais dos seguintes gráficos representam funções? Justifique.</p>
-        <img src="https://www.mathsisfun.com/algebra/images/function-graph.svg" alt="Gráfico 1" width="200" style="margin: 10px; border: 1px solid #ccc;">
-        <img src="https://www.mathsisfun.com/algebra/images/not-function.gif" alt="Gráfico 2" width="200" style="margin: 10px; border: 1px solid #ccc;">
+        
+        <div class="graph-container">
+            <div class="graph">
+                <p><strong>Gráfico A</strong></p>
+                <svg width="200" height="150" viewBox="0 0 200 150">
+                    <!-- Eixos -->
+                    <line x1="20" y1="130" x2="180" y2="130" stroke="#333" stroke-width="2"/>
+                    <line x1="100" y1="20" x2="100" y2="130" stroke="#333" stroke-width="2"/>
+                    
+                    <!-- Função linear -->
+                    <polyline points="30,110 70,70 130,30 170,50" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                    
+                    <!-- Reta vertical de teste -->
+                    <line x1="130" y1="20" x2="130" y2="130" stroke="#3498db" stroke-width="1" stroke-dasharray="5,5"/>
+                    <circle cx="130" cy="30" r="4" fill="#3498db"/>
+                    <text x="135" y="20" font-size="12" fill="#3498db">x=130</text>
+                </svg>
+            </div>
+            
+            <div class="graph">
+                <p><strong>Gráfico B</strong></p>
+                <svg width="200" height="150" viewBox="0 0 200 150">
+                    <!-- Eixos -->
+                    <line x1="20" y1="130" x2="180" y2="130" stroke="#333" stroke-width="2"/>
+                    <line x1="100" y1="20" x2="100" y2="130" stroke="#333" stroke-width="2"/>
+                    
+                    <!-- Círculo (não é função) -->
+                    <circle cx="100" cy="80" r="50" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                    
+                    <!-- Reta vertical de teste -->
+                    <line x1="130" y1="20" x2="130" y2="130" stroke="#3498db" stroke-width="1" stroke-dasharray="5,5"/>
+                    <circle cx="130" cy="55" r="4" fill="#3498db"/>
+                    <circle cx="130" cy="105" r="4" fill="#3498db"/>
+                    <text x="135" y="20" font-size="12" fill="#3498db">x=130</text>
+                </svg>
+            </div>
+        </div>
+        
         <p class="tip">Lembre-se: Se uma reta vertical interceptar o gráfico mais de uma vez, não é função.</p>
         <button onclick="showAnswer(4)">Mostrar Resposta</button>
         <div id="answer4" class="answer">
             <p><strong>Resposta:</strong></p>
-            <p><strong>Primeiro gráfico:</strong> É função, pois nenhuma reta vertical intercepta mais de uma vez.<br>
-            <strong>Segundo gráfico (círculo):</strong> Não é função, pois retas verticais no meio do círculo interceptam duas vezes.</p>
+            <p><strong>Gráfico A:</strong> É função, pois a reta vertical azul intercepta o gráfico apenas uma vez.<br>
+            <strong>Gráfico B (círculo):</strong> Não é função, pois a reta vertical azul intercepta duas vezes (em y=55 e y=105).</p>
+            <p>O Teste da Reta Vertical afirma que um gráfico representa uma função se e somente se nenhuma reta vertical intersecta o gráfico mais de uma vez.</p>
         </div>
     </div>
     
