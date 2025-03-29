@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Potenciação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        .exercicio {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 5px solid #007BFF;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .exercicio input {
+            width: 100px;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .correto {
+            color: green;
+            font-weight: bold;
+        }
+        .errado {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exercícios de Potenciação</h1>
+
+    <div class="exercicio">
+        <p>1) Calcule: <strong>5<sup>3</sup></strong></p>
+        <input type="number" id="resp1">
+        <span id="res1"></span>
+    </div>
+
+    <div class="exercicio">
+        <p>2) Calcule: <strong>2<sup>6</sup></strong></p>
+        <input type="number" id="resp2">
+        <span id="res2"></span>
+    </div>
+
+    <div class="exercicio">
+        <p>3) Calcule: <strong>10<sup>4</sup></strong></p>
+        <input type="number" id="resp3">
+        <span id="res3"></span>
+    </div>
+
+    <div class="exercicio">
+        <p>4) Resolva: <strong>3<sup>4</sup> × 3<sup>2</sup></strong></p>
+        <input type="number" id="resp4">
+        <span id="res4"></span>
+    </div>
+
+    <div class="exercicio">
+        <p>5) Resolva: <strong>(5<sup>2</sup>)<sup>3</sup></strong></p>
+        <input type="number" id="resp5">
+        <span id="res5"></span>
+    </div>
+
+    <button onclick="verificarRespostas()">Verificar Respostas</button>
+
+    <script>
+        function verificarRespostas() {
+            let respostasCorretas = [125, 64, 10000, 729, 15625];
+            for (let i = 1; i <= respostasCorretas.length; i++) {
+                let respostaUsuario = document.getElementById("resp" + i).value;
+                let resultadoSpan = document.getElementById("res" + i);
+                if (parseInt(respostaUsuario) === respostasCorretas[i - 1]) {
+                    resultadoSpan.innerHTML = "✔ Correto!";
+                    resultadoSpan.className = "correto";
+                } else {
+                    resultadoSpan.innerHTML = "✘ Errado!";
+                    resultadoSpan.className = "errado";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
