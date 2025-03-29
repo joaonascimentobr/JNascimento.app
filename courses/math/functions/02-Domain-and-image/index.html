@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domínio e Imagem de Funções</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2980b9;
+            margin-top: 35px;
+            border-left: 5px solid #e74c3c;
+            padding-left: 15px;
+        }
+        
+        .concept-box {
+            background-color: #e8f4fc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 6px solid #3498db;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        }
+        
+        .example {
+            background-color: #e8f8f5;
+            padding: 18px;
+            border-radius: 8px;
+            border-left: 6px solid #2ecc71;
+            margin: 20px 0;
+        }
+        
+        .visualization {
+            background-color: #fef9e7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 6px solid #f39c12;
+        }
+        
+        .math {
+            font-family: "Cambria Math", "Times New Roman", serif;
+            font-size: 1.2em;
+            background-color: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        
+        .interactive {
+            background-color: #f5eef8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .graph-container {
+            width: 100%;
+            height: 300px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .axis {
+            position: absolute;
+            background-color: #333;
+        }
+        
+        .x-axis {
+            height: 2px;
+            width: 100%;
+            bottom: 50%;
+            left: 0;
+        }
+        
+        .y-axis {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            top: 0;
+        }
+        
+        .function {
+            position: absolute;
+            height: 2px;
+            background-color: #e74c3c;
+            transform-origin: left center;
+        }
+        
+        .domain {
+            position: absolute;
+            bottom: 48%;
+            height: 4px;
+            background-color: #3498db;
+            opacity: 0.7;
+        }
+        
+        .range {
+            position: absolute;
+            left: 52%;
+            width: 4px;
+            background-color: #2ecc71;
+            opacity: 0.7;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        
+        select {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Domínio e Imagem de Funções</h1>
+    
+    <div class="concept-box">
+        <p>Em matemática, o <strong>domínio</strong> e a <strong>imagem</strong> são conceitos fundamentais para entender completamente qualquer função. Eles definem, respectivamente:</p>
+        <ul>
+            <li><strong>Domínio (D(f))</strong>: Todos os valores de entrada (x) que a função pode aceitar</li>
+            <li><strong>Imagem (Im(f))</strong>: Todos os valores de saída (f(x)) que a função pode produzir</li>
+        </ul>
+    </div>
+    
+    <h2>Domínio de uma Função</h2>
+    
+    <div class="example">
+        <p>O domínio é determinado pelas restrições da função:</p>
+        <ul>
+            <li><span class="math">f(x) = \frac{1}{x}</span> → D(f) = ℝ - {0} (não pode dividir por zero)</li>
+            <li><span class="math">f(x) = \sqrt{x}</span> → D(f) = [0, +∞[ (raiz quadrada exige x ≥ 0)</li>
+            <li><span class="math">f(x) = \log(x)</span> → D(f) = ]0, +∞[ (logaritmo exige x > 0)</li>
+        </ul>
+    </div>
+    
+    <h2>Imagem de uma Função</h2>
+    
+    <div class="example">
+        <p>A imagem é determinada pelos valores que a função pode atingir:</p>
+        <ul>
+            <li><span class="math">f(x) = x^2</span> → Im(f) = [0, +∞[ (quadrados são sempre positivos)</li>
+            <li><span class="math">f(x) = \sin(x)</span> → Im(f) = [-1, 1] (seno varia entre -1 e 1)</li>
+            <li><span class="math">f(x) = e^x</span> → Im(f) = ]0, +∞[ (exponencial é sempre positiva)</li>
+        </ul>
+    </div>
+    
+    <h2>Representação Gráfica</h2>
+    
+    <div class="visualization">
+        <p>No gráfico de uma função:</p>
+        <ul>
+            <li><strong>Domínio</strong>: Projeção do gráfico no eixo x (horizontal)</li>
+            <li><strong>Imagem</strong>: Projeção do gráfico no eixo y (vertical)</li>
+        </ul>
+        
+        <div class="graph-container" id="graph">
+            <div class="axis x-axis"></div>
+            <div class="axis y-axis"></div>
+            <div class="domain" id="domain"></div>
+            <div class="range" id="range"></div>
+            <div class="function" id="function"></div>
+        </div>
+        
+        <div class="controls">
+            <div>
+                <label for="functionSelect">Escolha uma função:</label>
+                <select id="functionSelect" onchange="updateFunction()">
+                    <option value="linear">f(x) = 2x + 1</option>
+                    <option value="quadratic">f(x) = x²</option>
+                    <option value="sqrt">f(x) = √x</option>
+                    <option value="reciprocal">f(x) = 1/x</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Como Determinar Domínio e Imagem</h2>
+    
+    <div class="interactive">
+        <h3>Para o Domínio:</h3>
+        <ol>
+            <li>Identifique restrições na função</li>
+            <li>Verifique denominadores (não podem ser zero)</li>
+            <li>Analise expressões sob raízes pares (devem ser ≥ 0)</li>
+            <li>Verifique argumentos de logaritmos (devem ser > 0)</li>
+        </ol>
+        
+        <h3>Para a Imagem:</h3>
+        <ol>
+            <li>Analise o comportamento da função</li>
+            <li>Identifique valores mínimos e máximos</li>
+            <li>Observe assíntotas horizontais</li>
+            <li>Estude transformações gráficas</li>
+        </ol>
+    </div>
+    
+    <div class="example">
+        <h3>Exemplo Completo</h3>
+        <p>Considere a função <span class="math">f(x) = \sqrt{4 - x^2}</span></p>
+        <p><strong>Domínio:</strong><br>
+        4 - x² ≥ 0 ⇒ x² ≤ 4 ⇒ -2 ≤ x ≤ 2<br>
+        D(f) = [-2, 2]</p>
+        
+        <p><strong>Imagem:</strong><br>
+        Como √(4 - x²) varia de √0 a √4 ⇒ 0 ≤ f(x) ≤ 2<br>
+        Im(f) = [0, 2]</p>
+    </div>
+    
+    <h2><a href="./exercices.html">Exercícios</a></h2>
+
+    <footer>
+        <p>Matemática Básica | Domínio e Imagem de Funções</p>
+    </footer>
+    
+    <script>
+        function updateFunction() {
+            const select = document.getElementById('functionSelect');
+            const func = document.getElementById('function');
+            const domain = document.getElementById('domain');
+            const range = document.getElementById('range');
+            
+            switch(select.value) {
+                case 'linear':
+                    func.style.width = '100%';
+                    func.style.left = '0%';
+                    func.style.bottom = '50%';
+                    func.style.transform = 'rotate(-26.565deg)';
+                    func.style.backgroundColor = '#e74c3c';
+                    
+                    domain.style.left = '0%';
+                    domain.style.width = '100%';
+                    
+                    range.style.bottom = '0%';
+                    range.style.top = '0%';
+                    break;
+                    
+                case 'quadratic':
+                    func.style.width = '100%';
+                    func.style.left = '50%';
+                    func.style.bottom = '50%';
+                    func.style.transform = 'scaleY(2) rotate(180deg)';
+                    func.style.borderRadius = '100% 100% 0 0';
+                    func.style.backgroundColor = '#9b59b6';
+                    
+                    domain.style.left = '0%';
+                    domain.style.width = '100%';
+                    
+                    range.style.bottom = '50%';
+                    range.style.top = '0%';
+                    break;
+                    
+                case 'sqrt':
+                    func.style.width = '50%';
+                    func.style.left = '0%';
+                    func.style.bottom = '50%';
+                    func.style.transform = 'rotate(-45deg) scaleX(1.414)';
+                    func.style.transformOrigin = 'left center';
+                    func.style.backgroundColor = '#2ecc71';
+                    
+                    domain.style.left = '0%';
+                    domain.style.width = '50%';
+                    
+                    range.style.bottom = '50%';
+                    range.style.top = '25%';
+                    break;
+                    
+                case 'reciprocal':
+                    func.style.width = '50%';
+                    func.style.left = '25%';
+                    func.style.bottom = '25%';
+                    func.style.transform = 'rotate(-45deg) scaleX(1.414)';
+                    func.style.transformOrigin = 'left center';
+                    func.style.backgroundColor = '#3498db';
+                    
+                    domain.style.left = '0%';
+                    domain.style.width = '25%';
+                    domain.style.backgroundColor = '#f39c12';
+                    
+                    range.style.bottom = '25%';
+                    range.style.top = '25%';
+                    range.style.backgroundColor = '#f39c12';
+                    break;
+            }
+        }
+        
+        // Initialize
+        updateFunction();
+    </script>
+</body>
+</html>
