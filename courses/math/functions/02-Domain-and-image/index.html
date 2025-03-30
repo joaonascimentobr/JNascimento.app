@@ -15,8 +15,11 @@
             background-color: #f9f9f9;
         }
         
-        h1 {
+        h1, h2, h3 {
             color: #2c3e50;
+        }
+        
+        h1 {
             text-align: center;
             border-bottom: 3px solid #3498db;
             padding-bottom: 15px;
@@ -24,10 +27,9 @@
         }
         
         h2 {
-            color: #2980b9;
-            margin-top: 35px;
             border-left: 5px solid #e74c3c;
             padding-left: 15px;
+            margin-top: 40px;
         }
         
         .concept-box {
@@ -47,14 +49,6 @@
             margin: 20px 0;
         }
         
-        .visualization {
-            background-color: #fef9e7;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 25px 0;
-            border-left: 6px solid #f39c12;
-        }
-        
         .math {
             font-family: "Cambria Math", "Times New Roman", serif;
             font-size: 1.2em;
@@ -65,76 +59,32 @@
             margin: 5px 0;
         }
         
-        .interactive {
-            background-color: #f5eef8;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 25px 0;
+        .definition {
+            font-weight: bold;
+            color: #2980b9;
         }
         
         .graph-container {
-            width: 100%;
-            height: 300px;
-            margin: 20px 0;
+            text-align: center;
+            margin: 25px 0;
+        }
+        
+        svg {
             border: 1px solid #ddd;
             background-color: white;
-            position: relative;
-            overflow: hidden;
+            max-width: 100%;
         }
         
-        .axis {
-            position: absolute;
-            background-color: #333;
+        .steps {
+            background-color: #fef9e7;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 6px solid #f39c12;
+            margin: 25px 0;
         }
         
-        .x-axis {
-            height: 2px;
-            width: 100%;
-            bottom: 50%;
-            left: 0;
-        }
-        
-        .y-axis {
-            width: 2px;
-            height: 100%;
-            left: 50%;
-            top: 0;
-        }
-        
-        .function {
-            position: absolute;
-            height: 2px;
-            background-color: #e74c3c;
-            transform-origin: left center;
-        }
-        
-        .domain {
-            position: absolute;
-            bottom: 48%;
-            height: 4px;
-            background-color: #3498db;
-            opacity: 0.7;
-        }
-        
-        .range {
-            position: absolute;
-            left: 52%;
-            width: 4px;
-            background-color: #2ecc71;
-            opacity: 0.7;
-        }
-        
-        .controls {
-            display: flex;
-            gap: 15px;
-            margin: 15px 0;
-            flex-wrap: wrap;
-        }
-        
-        select {
-            padding: 8px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
+        .steps ol {
+            padding-left: 20px;
         }
         
         footer {
@@ -150,176 +100,135 @@
     <h1>Domínio e Imagem de Funções</h1>
     
     <div class="concept-box">
-        <p>Em matemática, o <strong>domínio</strong> e a <strong>imagem</strong> são conceitos fundamentais para entender completamente qualquer função. Eles definem, respectivamente:</p>
-        <ul>
-            <li><strong>Domínio (D(f))</strong>: Todos os valores de entrada (x) que a função pode aceitar</li>
-            <li><strong>Imagem (Im(f))</strong>: Todos os valores de saída (f(x)) que a função pode produzir</li>
-        </ul>
+        <p><span class="definition">Domínio e imagem</span> são dois conceitos fundamentais no estudo de funções matemáticas. Eles definem, respectivamente, os valores de entrada que uma função pode receber e os valores de saída que ela pode produzir.</p>
     </div>
     
-    <h2>Domínio de uma Função</h2>
+    <h2>Domínio (D(f))</h2>
+    
+    <p>O <span class="definition">domínio</span> de uma função é o conjunto de todos os valores possíveis para a variável independente (<span class="math">x</span>) para os quais a função está definida.</p>
     
     <div class="example">
-        <p>O domínio é determinado pelas restrições da função:</p>
-        <ul>
-            <li><span class="math">f(x) = \frac{1}{x}</span> → D(f) = ℝ - {0} (não pode dividir por zero)</li>
-            <li><span class="math">f(x) = \sqrt{x}</span> → D(f) = [0, +∞[ (raiz quadrada exige x ≥ 0)</li>
-            <li><span class="math">f(x) = \log(x)</span> → D(f) = ]0, +∞[ (logaritmo exige x > 0)</li>
-        </ul>
+        <p><strong>Exemplos:</strong></p>
+        <p>1. Para <span class="math">f(x) = x²</span>, o domínio são todos os números reais: <span class="math">D(f) = ℝ</span></p>
+        <p>2. Para <span class="math">f(x) = \frac{1}{x}</span>, o domínio é ℝ exceto <span class="math">x=0</span>: <span class="math">D(f) = ℝ \setminus \{0\}</span></p>
+        <p>3. Para <span class="math">f(x) = √x</span>, o domínio é <span class="math">x ≥ 0</span>: <span class="math">D(f) = [0, +∞[</span></p>
     </div>
     
-    <h2>Imagem de uma Função</h2>
+    <div class="graph-container">
+        <svg width="400" height="200" viewBox="0 0 400 200">
+            <!-- Eixos -->
+            <line x1="50" y1="150" x2="350" y2="150" stroke="#333" stroke-width="2"/>
+            <line x1="200" y1="50" x2="200" y2="150" stroke="#333" stroke-width="2"/>
+            
+            <!-- Função 1/x -->
+            <path d="M 50 100 L 190 30 M 210 170 L 350 100" fill="none" stroke="#e74c3c" stroke-width="2"/>
+            <circle cx="200" cy="100" r="5" fill="white" stroke="#e74c3c" stroke-width="2"/>
+            
+            <!-- Função √x -->
+            <path d="M 200 150 Q 275 100 350 50" fill="none" stroke="#3498db" stroke-width="2"/>
+            
+            <!-- Legendas -->
+            <text x="100" y="40" font-size="12">f(x) = 1/x</text>
+            <text x="300" y="40" font-size="12">f(x) = √x</text>
+            <text x="50" y="170" font-size="12">Domínio: x ≠ 0</text>
+            <text x="300" y="170" font-size="12">Domínio: x ≥ 0</text>
+        </svg>
+    </div>
+    
+    <h2>Imagem (Im(f))</h2>
+    
+    <p>A <span class="definition">imagem</span> de uma função é o conjunto de todos os valores possíveis que a variável dependente (<span class="math">y</span> ou <span class="math">f(x)</span>) pode assumir.</p>
     
     <div class="example">
-        <p>A imagem é determinada pelos valores que a função pode atingir:</p>
-        <ul>
-            <li><span class="math">f(x) = x^2</span> → Im(f) = [0, +∞[ (quadrados são sempre positivos)</li>
-            <li><span class="math">f(x) = \sin(x)</span> → Im(f) = [-1, 1] (seno varia entre -1 e 1)</li>
-            <li><span class="math">f(x) = e^x</span> → Im(f) = ]0, +∞[ (exponencial é sempre positiva)</li>
-        </ul>
+        <p><strong>Exemplos:</strong></p>
+        <p>1. Para <span class="math">f(x) = x²</span>, a imagem é <span class="math">y ≥ 0</span>: <span class="math">Im(f) = [0, +∞[</span></p>
+        <p>2. Para <span class="math">f(x) = \frac{1}{x}</span>, a imagem é ℝ exceto <span class="math">y=0</span>: <span class="math">Im(f) = ℝ \setminus \{0\}</span></p>
+        <p>3. Para <span class="math">f(x) = √x</span>, a imagem é <span class="math">y ≥ 0</span>: <span class="math">Im(f) = [0, +∞[</span></p>
     </div>
     
-    <h2>Representação Gráfica</h2>
+    <h2>Como determinar domínio e imagem</h2>
     
-    <div class="visualization">
-        <p>No gráfico de uma função:</p>
-        <ul>
-            <li><strong>Domínio</strong>: Projeção do gráfico no eixo x (horizontal)</li>
-            <li><strong>Imagem</strong>: Projeção do gráfico no eixo y (vertical)</li>
-        </ul>
-        
-        <div class="graph-container" id="graph">
-            <div class="axis x-axis"></div>
-            <div class="axis y-axis"></div>
-            <div class="domain" id="domain"></div>
-            <div class="range" id="range"></div>
-            <div class="function" id="function"></div>
-        </div>
-        
-        <div class="controls">
-            <div>
-                <label for="functionSelect">Escolha uma função:</label>
-                <select id="functionSelect" onchange="updateFunction()">
-                    <option value="linear">f(x) = 2x + 1</option>
-                    <option value="quadratic">f(x) = x²</option>
-                    <option value="sqrt">f(x) = √x</option>
-                    <option value="reciprocal">f(x) = 1/x</option>
-                </select>
-            </div>
-        </div>
-    </div>
-    
-    <h2>Como Determinar Domínio e Imagem</h2>
-    
-    <div class="interactive">
-        <h3>Para o Domínio:</h3>
+    <div class="steps">
+        <h3>Para o domínio:</h3>
         <ol>
-            <li>Identifique restrições na função</li>
-            <li>Verifique denominadores (não podem ser zero)</li>
-            <li>Analise expressões sob raízes pares (devem ser ≥ 0)</li>
-            <li>Verifique argumentos de logaritmos (devem ser > 0)</li>
+            <li>Identifique restrições na função:
+                <ul>
+                    <li>Denominadores não podem ser zero</li>
+                    <li>Expressões sob raízes pares devem ser ≥ 0</li>
+                    <li>Logaritmos só aceitam argumentos positivos</li>
+                </ul>
+            </li>
+            <li>Resolva as desigualdades resultantes</li>
+            <li>Expresse o conjunto solução em notação matemática</li>
         </ol>
         
-        <h3>Para a Imagem:</h3>
+        <h3>Para a imagem:</h3>
         <ol>
-            <li>Analise o comportamento da função</li>
-            <li>Identifique valores mínimos e máximos</li>
-            <li>Observe assíntotas horizontais</li>
-            <li>Estude transformações gráficas</li>
+            <li>Analise o comportamento da função:
+                <ul>
+                    <li>Valores mínimos e máximos</li>
+                    <li>Assíntotas horizontais</li>
+                    <li>Transformações gráficas</li>
+                </ul>
+            </li>
+            <li>Se possível, inverta a função para encontrar os valores de y possíveis</li>
+            <li>Use cálculo diferencial para funções mais complexas</li>
         </ol>
     </div>
     
+    <h2>Representação gráfica</h2>
+    
+    <p>No gráfico de uma função:</p>
+    <ul>
+        <li>O <span class="definition">domínio</span> corresponde à projeção no eixo <span class="math">x</span></li>
+        <li>A <span class="definition">imagem</span> corresponde à projeção no eixo <span class="math">y</span></li>
+    </ul>
+    
+    <div class="graph-container">
+        <svg width="400" height="300" viewBox="0 0 400 300">
+            <!-- Eixos -->
+            <line x1="50" y1="250" x2="350" y2="250" stroke="#333" stroke-width="2"/>
+            <line x1="200" y1="50" x2="200" y2="250" stroke="#333" stroke-width="2"/>
+            
+            <!-- Parábola -->
+            <path d="M 50 250 Q 200 50 350 250" fill="none" stroke="#e74c3c" stroke-width="2"/>
+            
+            <!-- Projeções -->
+            <line x1="50" y1="250" x2="50" y2="270" stroke="#3498db" stroke-width="1" stroke-dasharray="5,5"/>
+            <line x1="350" y1="250" x2="350" y2="270" stroke="#3498db" stroke-width="1" stroke-dasharray="5,5"/>
+            <line x1="50" y1="50" x2="70" y2="50" stroke="#2ecc71" stroke-width="1" stroke-dasharray="5,5"/>
+            
+            <!-- Legendas -->
+            <text x="200" y="280" font-size="12" text-anchor="middle">Domínio: projeção no eixo x</text>
+            <text x="100" y="30" font-size="12">Imagem: projeção no eixo y</text>
+            <rect x="45" y="265" width="10" height="10" fill="#3498db"/>
+            <rect x="345" y="265" width="10" height="10" fill="#3498db"/>
+            <rect x="55" y="45" width="10" height="10" fill="#2ecc71"/>
+        </svg>
+    </div>
+    
+    <h2>Exemplo completo</h2>
+    
     <div class="example">
-        <h3>Exemplo Completo</h3>
-        <p>Considere a função <span class="math">f(x) = \sqrt{4 - x^2}</span></p>
+        <p>Considere a função <span class="math">f(x) = √(4 - x²)</span></p>
+        
         <p><strong>Domínio:</strong><br>
-        4 - x² ≥ 0 ⇒ x² ≤ 4 ⇒ -2 ≤ x ≤ 2<br>
-        D(f) = [-2, 2]</p>
+        <span class="math">4 - x² ≥ 0 ⇒ x² ≤ 4 ⇒ -2 ≤ x ≤ 2</span><br>
+        <span class="math">D(f) = [-2, 2]</span></p>
         
         <p><strong>Imagem:</strong><br>
-        Como √(4 - x²) varia de √0 a √4 ⇒ 0 ≤ f(x) ≤ 2<br>
-        Im(f) = [0, 2]</p>
+        Como <span class="math">√(4 - x²)</span> varia de <span class="math">√0</span> a <span class="math">√4</span> ⇒ <span class="math">0 ≤ f(x) ≤ 2</span><br>
+        <span class="math">Im(f) = [0, 2]</span></p>
     </div>
-    
-    <h2><a href="./exercices.html">Exercícios</a></h2>
 
-    <footer>
-        <p>Matemática Básica | Domínio e Imagem de Funções</p>
-    </footer>
+    <h2><a href="./exercices.html">Exercícios</a></h2>
     
-    <script>
-        function updateFunction() {
-            const select = document.getElementById('functionSelect');
-            const func = document.getElementById('function');
-            const domain = document.getElementById('domain');
-            const range = document.getElementById('range');
-            
-            switch(select.value) {
-                case 'linear':
-                    func.style.width = '100%';
-                    func.style.left = '0%';
-                    func.style.bottom = '50%';
-                    func.style.transform = 'rotate(-26.565deg)';
-                    func.style.backgroundColor = '#e74c3c';
-                    
-                    domain.style.left = '0%';
-                    domain.style.width = '100%';
-                    
-                    range.style.bottom = '0%';
-                    range.style.top = '0%';
-                    break;
-                    
-                case 'quadratic':
-                    func.style.width = '100%';
-                    func.style.left = '50%';
-                    func.style.bottom = '50%';
-                    func.style.transform = 'scaleY(2) rotate(180deg)';
-                    func.style.borderRadius = '100% 100% 0 0';
-                    func.style.backgroundColor = '#9b59b6';
-                    
-                    domain.style.left = '0%';
-                    domain.style.width = '100%';
-                    
-                    range.style.bottom = '50%';
-                    range.style.top = '0%';
-                    break;
-                    
-                case 'sqrt':
-                    func.style.width = '50%';
-                    func.style.left = '0%';
-                    func.style.bottom = '50%';
-                    func.style.transform = 'rotate(-45deg) scaleX(1.414)';
-                    func.style.transformOrigin = 'left center';
-                    func.style.backgroundColor = '#2ecc71';
-                    
-                    domain.style.left = '0%';
-                    domain.style.width = '50%';
-                    
-                    range.style.bottom = '50%';
-                    range.style.top = '25%';
-                    break;
-                    
-                case 'reciprocal':
-                    func.style.width = '50%';
-                    func.style.left = '25%';
-                    func.style.bottom = '25%';
-                    func.style.transform = 'rotate(-45deg) scaleX(1.414)';
-                    func.style.transformOrigin = 'left center';
-                    func.style.backgroundColor = '#3498db';
-                    
-                    domain.style.left = '0%';
-                    domain.style.width = '25%';
-                    domain.style.backgroundColor = '#f39c12';
-                    
-                    range.style.bottom = '25%';
-                    range.style.top = '25%';
-                    range.style.backgroundColor = '#f39c12';
-                    break;
-            }
-        }
-        
-        // Initialize
-        updateFunction();
-    </script>
+    <footer>
+        <p>Matemática - Domínio e Imagem de Funções</p>
+    </footer>
+
+    <!-- MathJax para renderização de fórmulas matemáticas -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

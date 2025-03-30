@@ -3,246 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercícios de Domínio e Imagem</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fa;
-        }
-        
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-        }
-        
-        .exercise {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-            border-left: 5px solid #3498db;
-        }
-        
-        .exercise h2 {
-            color: #2980b9;
-            margin-top: 0;
-        }
-        
-        .difficulty {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-size: 0.8em;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-        
-        .easy {
-            background-color: #d5f5e3;
-            color: #27ae60;
-        }
-        
-        .medium {
-            background-color: #fef9e7;
-            color: #f39c12;
-        }
-        
-        .hard {
-            background-color: #fadbd8;
-            color: #e74c3c;
-        }
-        
-        button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background-color 0.3s;
-        }
-        
-        button:hover {
-            background-color: #2980b9;
-        }
-        
-        .answer {
-            display: none;
-            margin-top: 15px;
-            padding: 15px;
-            background-color: #e8f8f5;
-            border-radius: 5px;
-            border-left: 4px solid #2ecc71;
-        }
-        
-        .tip {
-            font-style: italic;
-            color: #7f8c8d;
-            border-left: 3px solid #9b59b6;
-            padding-left: 10px;
-            margin: 10px 0;
-        }
-        
-        .math {
-            font-family: "Cambria Math", "Times New Roman", serif;
-            font-size: 1.1em;
-            background-color: #f0f0f0;
-            padding: 3px 8px;
-            border-radius: 4px;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #7f8c8d;
-        }
-    </style>
+    <title>Exercícios sobre Domínio e Imagem</title>
+    <link rel="stylesheet" href="exercices.css">
 </head>
 <body>
-    <h1>Exercícios de Domínio e Imagem</h1>
+    <h1>Exercícios sobre Domínio e Imagem</h1>
     
     <div class="exercise">
-        <h2>1. Domínio Básico <span class="difficulty easy">Fácil</span></h2>
+        <h2>1. Identificação de Domínio <span class="difficulty easy">Fácil</span></h2>
         <p>Determine o domínio das seguintes funções:</p>
         <ol type="a">
-            <li><span class="math">f(x) = 3x + 2</span></li>
-            <li><span class="math">g(x) = \frac{1}{x-4}</span></li>
-            <li><span class="math">h(x) = \sqrt{x+5}</span></li>
+            <li><span class="math">f(x) = 3x - 7</span></li>
+            <li><span class="math">g(x) = \frac{1}{x+2}</span></li>
+            <li><span class="math">h(x) = \sqrt{x-4}</span></li>
         </ol>
         <button onclick="showAnswer(1)">Mostrar Resposta</button>
         <div id="answer1" class="answer">
             <p><strong>Respostas:</strong></p>
-            <p>a) <span class="math">D(f) = \mathbb{R}</span> (Todos os números reais)<br>
-            b) <span class="math">D(g) = \mathbb{R} - \{4\}</span> (Todos os reais exceto x=4)<br>
-            c) <span class="math">D(h) = \{x \in \mathbb{R} \mid x \geq -5\}</span> (x+5 ≥ 0)</p>
+            <p>a) <span class="math">D(f) = \mathbb{R}</span> (Todos os números reais)</p>
+            <p>b) <span class="math">D(g) = \mathbb{R} \setminus \{-2\}</span> (Todos os reais exceto x = -2)</p>
+            <p>c) <span class="math">D(h) = [4, +\infty[</span> (x ≥ 4)</p>
         </div>
     </div>
     
     <div class="exercise">
-        <h2>2. Imagem Básica <span class="difficulty easy">Fácil</span></h2>
-        <p>Determine a imagem das seguintes funções:</p>
+        <h2>2. Determinação de Imagem <span class="difficulty medium">Médio</span></h2>
+        <p>Encontre a imagem das funções:</p>
         <ol type="a">
-            <li><span class="math">f(x) = x^2 + 1</span></li>
-            <li><span class="math">g(x) = -2x + 3</span></li>
-            <li><span class="math">h(x) = \sqrt{9 - x^2}</span></li>
+            <li><span class="math">f(x) = x^2 + 3</span></li>
+            <li><span class="math">g(x) = -\sqrt{x}</span></li>
+            <li><span class="math">h(x) = \frac{2}{x-1}</span></li>
         </ol>
+        <div class="tip">Dica: Para a letra c, observe que o denominador nunca será zero no domínio.</div>
         <button onclick="showAnswer(2)">Mostrar Resposta</button>
         <div id="answer2" class="answer">
             <p><strong>Respostas:</strong></p>
-            <p>a) <span class="math">Im(f) = [1, +\infty[</span> (x² ≥ 0 ⇒ x²+1 ≥ 1)<br>
-            b) <span class="math">Im(g) = \mathbb{R}</span> (Função linear)<br>
-            c) <span class="math">Im(h) = [0, 3]</span> (√(9-x²) varia de 0 a 3)</p>
+            <p>a) <span class="math">Im(f) = [3, +\infty[</span> (x² ≥ 0 ⇒ x²+3 ≥ 3)</p>
+            <p>b) <span class="math">Im(g) = ]-\infty, 0]</span> (√x ≥ 0 ⇒ -√x ≤ 0)</p>
+            <p>c) <span class="math">Im(h) = \mathbb{R} \setminus \{0\}</span> (2/(x-1) nunca será zero)</p>
         </div>
     </div>
     
     <div class="exercise">
-        <h2>3. Domínio com Múltiplas Restrições <span class="difficulty medium">Médio</span></h2>
-        <p>Determine o domínio da função:</p>
-        <p class="math">f(x) = \frac{\sqrt{x-2}}{x^2 - 9}</p>
-        <div class="tip">Dica: Considere tanto a raiz quadrada quanto o denominador.</div>
+        <h2>3. Domínio e Imagem Combinados <span class="difficulty medium">Médio</span></h2>
+        <p>Para a função <span class="math">f(x) = \sqrt{9 - x^2}</span>, determine:</p>
+        <ol type="a">
+            <li>O domínio</li>
+            <li>A imagem</li>
+        </ol>
         <button onclick="showAnswer(3)">Mostrar Resposta</button>
         <div id="answer3" class="answer">
-            <p><strong>Resposta:</strong></p>
-            <p>Duas condições devem ser satisfeitas simultaneamente:</p>
-            <ol>
-                <li>Expressão sob a raiz: <span class="math">x - 2 \geq 0 \Rightarrow x \geq 2</span></li>
-                <li>Denominador diferente de zero: <span class="math">x^2 - 9 \neq 0 \Rightarrow x \neq \pm 3</span></li>
-            </ol>
-            <p>Portanto: <span class="math">D(f) = [2, +\infty[ - \{3\} = [2, 3[ \cup ]3, +\infty[</span></p>
+            <p><strong>Respostas:</strong></p>
+            <p>a) <span class="math">D(f) = [-3, 3]</span> (9 - x² ≥ 0 ⇒ x² ≤ 9 ⇒ -3 ≤ x ≤ 3)</p>
+            <p>b) <span class="math">Im(f) = [0, 3]</span> (√(9-x²) varia de √0=0 a √9=3)</p>
         </div>
     </div>
     
     <div class="exercise">
-        <h2>4. Domínio e Imagem a partir do Gráfico <span class="difficulty medium">Médio</span></h2>
-        <p>Observe o gráfico abaixo e determine:</p>
-        <img src="https://www.mathsisfun.com/algebra/images/function-graph.svg" alt="Gráfico de função" style="max-width: 100%; height: auto; display: block; margin: 15px auto; border: 1px solid #ddd;">
+        <h2>4. Função Racional <span class="difficulty hard">Difícil</span></h2>
+        <p>Considere a função <span class="math">f(x) = \frac{x+1}{x-2}</span>:</p>
         <ol type="a">
-            <li>O domínio da função</li>
-            <li>A imagem da função</li>
+            <li>Determine seu domínio</li>
+            <li>Mostre que sua imagem é <span class="math">\mathbb{R} \setminus \{1\}</span></li>
         </ol>
+        <div class="tip">Dica: Para a letra b, tente isolar x em função de y.</div>
         <button onclick="showAnswer(4)">Mostrar Resposta</button>
         <div id="answer4" class="answer">
             <p><strong>Respostas:</strong></p>
-            <p>a) <span class="math">D(f) = [-3, 3]</span> (valores de x no gráfico)<br>
-            b) <span class="math">Im(f) = [-2, 2]</span> (valores de y no gráfico)</p>
+            <p>a) <span class="math">D(f) = \mathbb{R} \setminus \{2\}</span> (x-2 ≠ 0 ⇒ x ≠ 2)</p>
+            <p>b) Seja <span class="math">y = \frac{x+1}{x-2}</span>. Resolvendo para x:
+               <span class="math">y(x-2) = x+1 ⇒ yx - 2y = x + 1 ⇒ yx - x = 2y + 1 ⇒ x(y-1) = 2y+1 ⇒ x = \frac{2y+1}{y-1}</span>
+               O denominador y-1 não pode ser zero ⇒ y ≠ 1. Logo, <span class="math">Im(f) = \mathbb{R} \setminus \{1\}</span></p>
         </div>
     </div>
     
     <div class="exercise">
         <h2>5. Função por Partes <span class="difficulty hard">Difícil</span></h2>
-        <p>Dada a função:</p>
-        <p class="math">f(x) = \begin{cases} 
-        x + 1 & \text{se } x < 0 \\
-        x^2 & \text{se } 0 \leq x \leq 2 \\
-        4 & \text{se } x > 2 
-        \end{cases}</p>
-        <p>Determine:</p>
+        <p>Dada a função definida por partes:</p>
+        <p><span class="math">f(x) = \begin{cases} 
+        x^2 & \text{se } x \leq 1 \\
+        2x - 1 & \text{se } x > 1 
+        \end{cases}</span></p>
         <ol type="a">
-            <li>O domínio</li>
-            <li>A imagem</li>
+            <li>Determine o domínio</li>
+            <li>Encontre a imagem</li>
+            <li>Esboce o gráfico</li>
         </ol>
         <button onclick="showAnswer(5)">Mostrar Resposta</button>
         <div id="answer5" class="answer">
             <p><strong>Respostas:</strong></p>
             <p>a) <span class="math">D(f) = \mathbb{R}</span> (definida para todos os reais)</p>
-            <p>b) Analisando cada parte:</p>
-            <ul>
-                <li>Para x < 0: <span class="math">f(x) = x + 1 \Rightarrow Im = ]-\infty, 1[</span></li>
-                <li>Para 0 ≤ x ≤ 2: <span class="math">f(x) = x^2 \Rightarrow Im = [0, 4]</span></li>
-                <li>Para x > 2: <span class="math">f(x) = 4 \Rightarrow Im = \{4\}</span></li>
-            </ul>
-            <p>União das imagens: <span class="math">Im(f) = ]-\infty, 1[ \cup [0, 4] = ]-\infty, 4]</span></p>
-        </div>
-    </div>
-    
-    <div class="exercise">
-        <h2>6. Função Racional <span class="difficulty hard">Difícil</span></h2>
-        <p>Determine domínio e imagem da função:</p>
-        <p class="math">f(x) = \frac{2}{x - 1} + 3</p>
-        <button onclick="showAnswer(6)">Mostrar Resposta</button>
-        <div id="answer6" class="answer">
-            <p><strong>Respostas:</strong></p>
-            <p>a) <strong>Domínio:</strong> <span class="math">D(f) = \mathbb{R} - \{1\}</span> (denominador não pode ser zero)</p>
-            <p>b) <strong>Imagem:</strong> Vamos analisar a função:</p>
-            <p><span class="math">y = \frac{2}{x-1} + 3</span></p>
-            <p>Isolando x:</p>
-            <p><span class="math">y - 3 = \frac{2}{x-1}</span></p>
-            <p><span class="math">x - 1 = \frac{2}{y-3}</span></p>
-            <p><span class="math">x = \frac{2}{y-3} + 1</span></p>
-            <p>O denominador não pode ser zero: <span class="math">y - 3 \neq 0 \Rightarrow y \neq 3</span></p>
-            <p>Portanto: <span class="math">Im(f) = \mathbb{R} - \{3\}</span></p>
+            <p>b) <span class="math">Im(f) = [0, +\infty[</span>:
+               <ul>
+                   <li>Para x ≤ 1: x² varia de 0 a 1 (quando x=0 e x=1)</li>
+                   <li>Para x > 1: 2x-1 > 1</li>
+                   <li>O valor mínimo é 0 (em x=0)</li>
+               </ul>
+            </p>
+            <p>c) Gráfico:
+               <ul>
+                   <li>Parábola y=x² até x=1 (incluindo o ponto (1,1))</li>
+                   <li>Reta y=2x-1 para x>1 (não inclui (1,1))</li>
+               </ul>
+            </p>
         </div>
     </div>
     
     <footer>
-        <p>Exercícios de Domínio e Imagem | Matemática Básica</p>
+        <p>Exercícios de Domínio e Imagem | Matemática</p>
     </footer>
     
     <script>
@@ -255,5 +123,9 @@
             }
         }
     </script>
+
+    <!-- MathJax para renderização de fórmulas matemáticas -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>
