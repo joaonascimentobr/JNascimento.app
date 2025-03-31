@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelagem Conceitual - Entidades e Atributos</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="bg-blue-600 text-white py-6 shadow-md">
+    <div class="max-w-5xl mx-auto px-4">
+      <h1 class="text-3xl font-bold">Modelagem Conceitual de Banco de Dados</h1>
+      <p class="text-lg mt-2">Parte 1: Entidades e Atributos</p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">O que é modelagem conceitual?</h2>
+      <p class="mb-4">Antes de criar um banco de dados, precisamos entender <strong>quais informações</strong> serão armazenadas e <strong>como organizá-las</strong>. A <strong>modelagem conceitual</strong> é a primeira etapa desse processo. Ela nos ajuda a planejar os dados de forma lógica, independente de qualquer tecnologia, sistema ou linguagem de programação.</p>
+      <p>Para isso, usamos um modelo chamado <strong>Modelo Entidade-Relacionamento (MER)</strong>.</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">1. Entidades</h2>
+      <p class="mb-4">Entidades são os <strong>principais elementos do sistema que precisam ser armazenados</strong>. Podem representar pessoas, objetos, lugares ou eventos importantes.</p>
+      <div class="bg-blue-100 p-4 rounded-lg mb-4">
+        <p><strong>Representação no diagrama:</strong> retângulos</p>
+      </div>
+      <p class="mb-2">Exemplos de entidades:</p>
+      <ul class="list-disc list-inside mb-4">
+        <li>Aluno</li>
+        <li>Professor</li>
+        <li>Produto</li>
+        <li>Pedido</li>
+      </ul>
+      <p><strong>Resumo:</strong> entidade é aquilo que você precisa guardar no sistema.</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">2. Atributos</h2>
+      <p class="mb-4">Atributos são as <strong>informações que descrevem as entidades</strong>. Cada atributo representa uma característica ou dado da entidade.</p>
+      <div class="bg-green-100 p-4 rounded-lg mb-4">
+        <p><strong>Representação no diagrama:</strong> elipses (ovais)</p>
+      </div>
+      <p class="mb-2">Exemplos de atributos:</p>
+      <ul class="list-disc list-inside mb-4">
+        <li>Aluno: matrícula, nome, data de nascimento</li>
+        <li>Produto: código, nome, preço</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-6 mb-2">Atributo-chave</h3>
+      <p class="mb-4">É o atributo que <strong>identifica de forma única</strong> cada instância da entidade, como CPF, código do produto ou número da matrícula.</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">Resumo</h2>
+      <table class="w-full table-auto border border-gray-300">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="border px-4 py-2 text-left">Conceito</th>
+            <th class="border px-4 py-2 text-left">Definição</th>
+            <th class="border px-4 py-2 text-left">Exemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-2">Entidade</td>
+            <td class="border px-4 py-2">Representa um objeto ou coisa do sistema</td>
+            <td class="border px-4 py-2">Cliente, Produto, Aluno</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Atributo</td>
+            <td class="border px-4 py-2">Característica da entidade</td>
+            <td class="border px-4 py-2">Nome, CPF, Preço</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Atributo-chave</td>
+            <td class="border px-4 py-2">Identifica de forma única um registro</td>
+            <td class="border px-4 py-2">Matrícula, Código, CPF</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Exemplo Visual</h2>
+      <p class="mb-4">Entidade: <strong>Aluno</strong> com os seguintes atributos:</p>
+      <ul class="list-disc list-inside mb-4">
+        <li>Matrícula (atributo-chave)</li>
+        <li>Nome</li>
+        <li>Data de Nascimento</li>
+        <li>CPF</li>
+      </ul>
+      <div class="bg-white border rounded-lg p-4 shadow-md text-center">
+        <p class="font-mono whitespace-pre">
+        <img src="./img1.jpeg" alt="Diagrama de Entidade-Relacionamento" >
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm text-gray-500 py-6">
+    &copy; 2025 Aula de Banco de Dados - Modelagem Conceitual
+  </footer>
+</body>
+</html>
