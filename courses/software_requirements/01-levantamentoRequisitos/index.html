@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levantamento de Requisitos de Software</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-6 shadow-md">
+    <h1 class="text-3xl font-bold text-center">Levantamento de Requisitos de Software</h1>
+    <p class="text-center mt-2">Entenda a base de um bom projeto de software</p>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6">
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">O que é?</h2>
+      <p>O <strong>levantamento de requisitos</strong> (ou <em>requirements elicitation</em>) é o processo de <strong>identificar, coletar e entender</strong> as necessidades dos usuários, clientes e demais partes interessadas para desenvolver um sistema eficaz.</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">Objetivo</h2>
+      <p>O objetivo é descobrir <strong>"o problema real a ser resolvido"</strong>, e entender o que o sistema deve fazer e como ele deve se comportar, antes de iniciar o desenvolvimento.</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">Tipos de Requisitos</h2>
+      <ul class="list-disc pl-6">
+        <li><strong>Requisitos Funcionais:</strong> O que o sistema deve fazer. Ex: "Permitir login com email e senha."</li>
+        <li><strong>Requisitos Não Funcionais:</strong> Como o sistema deve se comportar. Ex: "Disponibilidade de 99,9%."</li>
+        <li><strong>Requisitos de Domínio:</strong> Regras específicas do negócio. Ex: "Somente admins podem alterar taxas."</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">Técnicas de Levantamento</h2>
+      <ul class="list-disc pl-6">
+        <li>Entrevistas</li>
+        <li>Questionários</li>
+        <li>Workshops</li>
+        <li>Brainstorming</li>
+        <li>Observação direta</li>
+        <li>Análise de documentos</li>
+        <li>Protótipos</li>
+        <li>User Stories</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">Quem Participa?</h2>
+      <ul class="list-disc pl-6">
+        <li>Analistas de sistemas</li>
+        <li>Engenheiros de requisitos</li>
+        <li>Stakeholders</li>
+        <li>Desenvolvedores e arquitetos</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">Riscos Comuns</h2>
+      <ul class="list-disc pl-6">
+        <li>Comunicação ruim com o cliente</li>
+        <li>Falta de envolvimento dos usuários finais</li>
+        <li>Requisitos vagos ou incompletos</li>
+        <li>Mudanças constantes</li>
+        <li>Falta de documentação adequada</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">Exemplo de Levantamento de Requisitos</h2>
+      <p class="mb-2"><strong>Sistema:</strong> Clínica Fácil – Sistema de Agendamento de Consultas</p>
+      <p class="mb-2"><strong>Stakeholders entrevistados:</strong></p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Recepcionista</li>
+        <li>Médico</li>
+        <li>Administrador da clínica</li>
+        <li>Pacientes (representantes)</li>
+      </ul>
+
+      <p class="mb-2"><strong>🌟 Objetivos do sistema (visão geral):</strong></p>
+      <p class="mb-4">O sistema deve permitir que pacientes agendem, cancelem e consultem horários disponíveis para consultas médicas. Médicos e recepcionistas devem poder gerenciar os horários, confirmar atendimentos e acessar informações dos pacientes.</p>
+
+      <p class="mb-2"><strong>📌 Requisitos Funcionais (RF):</strong></p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>RF01 – O sistema deve permitir que o paciente realize agendamentos online.</li>
+        <li>RF02 – O sistema deve disponibilizar os horários livres de cada médico.</li>
+        <li>RF03 – O sistema deve enviar confirmação por e-mail ou SMS ao paciente após o agendamento.</li>
+        <li>RF04 – O médico deve poder visualizar sua agenda diária e semanal.</li>
+        <li>RF05 – A recepcionista deve poder agendar, reagendar ou cancelar consultas para qualquer paciente.</li>
+        <li>RF06 – O sistema deve registrar o comparecimento do paciente à consulta.</li>
+      </ul>
+
+      <p class="mb-2"><strong>📌 Requisitos Não Funcionais (RNF):</strong></p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>RNF01 – O sistema deve estar disponível 24h por dia, 7 dias por semana.</li>
+        <li>RNF02 – A interface deve ser compatível com dispositivos móveis.</li>
+        <li>RNF03 – O sistema deve responder às solicitações do usuário em até 3 segundos.</li>
+        <li>RNF04 – Os dados dos pacientes devem ser armazenados com criptografia.</li>
+      </ul>
+
+      <p class="mb-2"><strong>📌 Regras de Negócio:</strong></p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Um paciente só pode agendar uma nova consulta se não tiver nenhuma pendência financeira.</li>
+        <li>Um médico só pode atender no máximo 20 pacientes por dia.</li>
+        <li>Consultas só podem ser agendadas com no mínimo 24 horas de antecedência.</li>
+      </ul>
+
+      <p class="mb-2"><strong>💬 User Story (Exemplo Ágil):</strong></p>
+      <blockquote class="border-l-4 border-blue-600 pl-4 italic">
+        Como paciente,<br>
+        quero visualizar os horários disponíveis dos médicos,<br>
+        para que eu possa agendar minha consulta no melhor horário pra mim.
+      </blockquote>
+
+      <p class="mt-4 mb-2"><strong>🧩️ Técnicas de Levantamento utilizadas:</strong></p>
+      <ul class="list-disc pl-6">
+        <li>Entrevistas com recepcionista e médicos</li>
+        <li>Questionário para pacientes</li>
+        <li>Observação da rotina da recepção</li>
+        <li>Protótipo de tela apresentado para validar entendimento dos requisitos</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+        <h2 class="text-2xl font-semibold mb-4">📝 Exercício Prático</h2>
+        <p class="mb-4">A seguir, proponha um levantamento de requisitos para um sistema de pedidos de uma lanchonete. Pense nos stakeholders envolvidos, objetivos do sistema, requisitos funcionais e não funcionais, regras de negócio, e se quiser, escreva uma user story.</p>
+  
+        <p class="mb-2 font-semibold">📱 Sistema: App de Pedidos para Lanchonete</p>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Identifique os <strong>stakeholders</strong> (ex: atendentes, clientes, gerente).</li>
+          <li>Defina os <strong>objetivos do sistema</strong> (ex: permitir pedidos online e acompanhamento em tempo real).</li>
+          <li>Liste alguns <strong>requisitos funcionais</strong> e <strong>não funcionais</strong>.</li>
+          <li>Estabeleça <strong>regras de negócio</strong> (ex: horário limite para pedidos, pagamento antecipado).</li>
+          <li>Escreva uma <strong>user story</strong> para um dos usuários do sistema.</li>
+        </ul>
+  
+        <p>Esse exercício ajudará você a praticar a aplicação dos conceitos estudados em um cenário realista e próximo do cotidiano.</p>
+      </section>
+  </main>
+
+  <footer class="bg-blue-600 text-white text-center p-4">
+    <p>&copy; 2025 Engenharia de Software</p>
+  </footer>
+</body>
+</html>
