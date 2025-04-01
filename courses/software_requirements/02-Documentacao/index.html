@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentação de Requisitos</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
+    header { background: #9dceff; color: white; padding: 20px; text-align: center; }
+    main { max-width: 900px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1, h2, h3 { color: #2c3e50; }
+    section { margin-bottom: 30px; }
+    ul, table { width: 100%; margin-top: 10px; }
+    table { border-collapse: collapse; }
+    th, td { padding: 8px 12px; border: 1px solid #ccc; }
+    th { background: #ecf0f1; text-align: left; }
+    code { background: #eee; padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Documentação de Requisitos de Software</h1>
+  </header>
+  <main>
+    <section>
+      <h2>O que é a Documentação de Requisitos?</h2>
+      <p>É o processo de registrar formalmente os requisitos levantados junto aos stakeholders. Serve como guia para o desenvolvimento, testes e validação do sistema.</p>
+    </section>
+    
+    <section>
+      <h2>Principais Seções da Documentação</h2>
+      <ul>
+        <li><strong>Introdução:</strong> Objetivo do sistema, definições</li>
+        <li><strong>Escopo:</strong> O que o sistema fará (e não fará)</li>
+        <li><strong>Stakeholders:</strong> Quem são os envolvidos</li>
+        <li><strong>Requisitos Funcionais e Não Funcionais</strong></li>
+        <li><strong>Regras de Negócio:</strong> Restrições da organização</li>
+        <li><strong>Critérios de Aceitação e User Stories</strong></li>
+        <li><strong>Protótipos e Diagramas (opcional)</strong></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Exemplo Prático – Sistema de Escola de Idiomas</h2>
+      <h3>1. Introdução</h3>
+      <p>Objetivo: Desenvolver um sistema para gerenciar matrículas e agendamento de aulas na escola XYZ.</p>
+
+      <h3>2. Stakeholders</h3>
+      <table>
+        <tr><th>Nome</th><th>Papel</th><th>Interesse</th></tr>
+        <tr><td>Ana Oliveira</td><td>Coordenadora</td><td>Gerenciar cursos e professores</td></tr>
+        <tr><td>João Silva</td><td>Professor</td><td>Organizar turmas e horários</td></tr>
+        <tr><td>Maria Santos</td><td>Secretária</td><td>Relatórios e matrículas</td></tr>
+        <tr><td>Carlos Mendes</td><td>Aluno</td><td>Matricular-se e agendar aulas</td></tr>
+      </table>
+
+      <h3>3. Requisitos Funcionais</h3>
+      <ul>
+        <li>RF01 – Cadastro de alunos</li>
+        <li>RF02 – Matrícula em cursos</li>
+        <li>RF03 – Escolha de modalidade</li>
+        <li>RF04 – Exibição de horários disponíveis</li>
+        <li>RF05 – Reagendamento de aulas</li>
+        <li>RF06 – Lançamento de presença</li>
+        <li>RF07 – Emissão de relatórios</li>
+        <li>RF08 – Upload de comprovantes</li>
+      </ul>
+
+      <h3>4. Requisitos Não Funcionais</h3>
+      <ul>
+        <li>RNF01 – Disponibilidade 24/7</li>
+        <li>RNF02 – Interface responsiva</li>
+        <li>RNF03 – Dados criptografados</li>
+        <li>RNF04 – Tempo de resposta < 2s</li>
+      </ul>
+
+      <h3>5. Regras de Negócio</h3>
+      <ul>
+        <li>RB01 – Sem sobreposição de horários</li>
+        <li>RB02 – Apenas alunos ativos agendam aulas</li>
+        <li>RB03 – Cancelamentos em menos de 24h não geram reembolso</li>
+        <li>RB04 – Máximo de 10 alunos por turma</li>
+      </ul>
+
+      <h3>6. User Stories</h3>
+      <ul>
+        <li><strong>US01:</strong> Como aluno, quero agendar aulas online, para estudar no melhor horário.</li>
+        <li><strong>US02:</strong> Como professor, quero ver minha agenda, para planejar melhor minhas aulas.</li>
+        <li><strong>US03:</strong> Como secretária, quero emitir relatórios, para acompanhar o desempenho das turmas.</li>
+      </ul>
+
+      
+    </section>
+  </main>
+</body>
+</html>
