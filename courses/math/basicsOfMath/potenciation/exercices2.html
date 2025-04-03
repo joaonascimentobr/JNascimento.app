@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propriedades de Potenciação</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    h2 {
+      color: #4CAF50;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .property {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1rem;
+    }
+    .property i {
+      color: #4CAF50;
+    }
+    .exercise {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .exercise input {
+      padding: 0.5rem;
+      width: 100px;
+      margin-right: 0.5rem;
+    }
+    .exercise button {
+      padding: 0.5rem 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .exercise-result {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Propriedades de Potenciação</h1>
+    <p>Entenda as principais regras da potenciação estudadas no ensino médio.</p>
+  </header>
+
+  <section>
+    <div class="exercise">
+      <h2>🔍 Teste seus conhecimentos</h2>
+
+      <!-- Questões por propriedade -->
+      <div id="exercicios"></div>
+    </div>
+  </section>
+
+  <script>
+    const questoes = [
+      { pergunta: "Quanto é 2^3 \\cdot 2^2?", resposta: 32 },
+      { pergunta: "Quanto é 5^4 \\cdot 5^1?", resposta: 3125 },
+      { pergunta: "Quanto é 3^2 \\cdot 3^3?", resposta: 243 },
+
+      { pergunta: "Quanto é 6^5 / 6^2?", resposta: 216 },
+      { pergunta: "Quanto é 10^3 / 10^1?", resposta: 100 },
+      { pergunta: "Quanto é 4^4 / 4^2?", resposta: 16 },
+
+      { pergunta: "Quanto é (2^2)^3?", resposta: 64 },
+      { pergunta: "Quanto é (5^1)^4?", resposta: 625 },
+      { pergunta: "Quanto é (3^3)^2?", resposta: 729 },
+
+      { pergunta: "Quanto é (2 * 3)^2?", resposta: 36 },
+      { pergunta: "Quanto é (4 * 5)^2?", resposta: 400 },
+      { pergunta: "Quanto é (1 * 6)^3?", resposta: 216 },
+
+      { pergunta: "Quanto é (3/2)^2?", resposta: 2.25 },
+      { pergunta: "Quanto é (4/5)^3?", resposta: 0.512 },
+      { pergunta: "Quanto é (10/2)^2?", resposta: 25 },
+
+      { pergunta: "Quanto é 7^0?", resposta: 1 },
+      { pergunta: "Quanto é 100^0?", resposta: 1 },
+      { pergunta: "Quanto é 999^0?", resposta: 1 },
+
+      { pergunta: "Quanto é 4^{-1}?", resposta: 0.25 },
+      { pergunta: "Quanto é 2^{-2}?", resposta: 0.25 },
+      { pergunta: "Quanto é 5^{-1}?", resposta: 0.2 },
+
+      { pergunta: "Quanto é 16^{1/2}?", resposta: 4 },
+      { pergunta: "Quanto é 27^{1/3}?", resposta: 3 },
+      { pergunta: "Quanto é 81^{1/4}?", resposta: 3 },
+
+      { pergunta: "Quanto é (-3)^2?", resposta: 9 },
+      { pergunta: "Quanto é (-2)^3?", resposta: -8 },
+      { pergunta: "Quanto é -2^4?", resposta: -16 },
+
+      { pergunta: "Quanto é 10^2?", resposta: 100 },
+      { pergunta: "Quanto é 10^{-2}?", resposta: 0.01 },
+      { pergunta: "Quanto é 10^5?", resposta: 100000 },
+
+      { pergunta: "Escreva 450000 em notação científica.", resposta: "4.5e5" },
+      { pergunta: "Escreva 0,00032 em notação científica.", resposta: "3.2e-4" },
+      { pergunta: "Escreva 7.2 milhões em notação científica.", resposta: "7.2e6" },
+
+      { pergunta: "Qual é o valor de 2^x quando x = 3?", resposta: 8 },
+      { pergunta: "Qual é o valor de 3^x quando x = 2?", resposta: 9 },
+      { pergunta: "Qual é o valor de 5^x quando x = 0?", resposta: 1 }
+    ];
+
+    const container = document.getElementById("exercicios");
+
+    questoes.forEach((q, i) => {
+      const inputId = `resp_${i}`;
+      const resultId = `res_${i}`;
+      container.innerHTML += `
+        <p>\\(${q.pergunta}\\)</p>
+        <input type="text" id="${inputId}" placeholder="Digite aqui" />
+        <button onclick="verifica(${i}, '${q.resposta}')">Verificar</button>
+        <div id="${resultId}" class="exercise-result"></div>
+      `;
+    });
+
+    if (window.MathJax) {
+      MathJax.typeset();
+    }
+
+    function verifica(i, correta) {
+      const input = document.getElementById(`resp_${i}`).value.trim().replace(',', '.');
+      const resultado = document.getElementById(`res_${i}`);
+      const corretaNormalizada = typeof correta === 'string' ? correta : Number(correta);
+      const respostaNormalizada = isNaN(corretaNormalizada) ? input.toLowerCase() : Number(input);
+      resultado.textContent = respostaNormalizada == corretaNormalizada ? '✅ Correto!' : `❌ Tente novamente. A resposta é ${correta}.`;
+    }
+  </script>
+</body>
+</html>

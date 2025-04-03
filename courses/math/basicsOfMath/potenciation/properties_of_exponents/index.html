@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propriedades de Potenciação</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    h2 {
+      color: #4CAF50;
+    }
+    .property {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Propriedades de Potenciação</h1>
+    <p>Entenda as principais regras da potenciação estudadas no ensino médio.</p>
+  </header>
+
+  <section>
+    <div class="property">
+      <h2>1. Produto de potências com mesma base</h2>
+      <p>\( a^m \cdot a^n = a^{m+n} \)</p>
+      <p>Exemplo: \( 2^3 \cdot 2^4 = 2^7 = 128 \)</p>
+    </div>
+
+    <div class="property">
+      <h2>2. Quociente de potências com mesma base</h2>
+      <p>\( \frac{a^m}{a^n} = a^{m-n} \), com \( a \neq 0 \)</p>
+      <p>Exemplo: \( \frac{5^6}{5^2} = 5^4 = 625 \)</p>
+    </div>
+
+    <div class="property">
+      <h2>3. Potência de uma potência</h2>
+      <p>\( (a^m)^n = a^{m \cdot n} \)</p>
+      <p>Exemplo: \( (3^2)^4 = 3^8 = 6561 \)</p>
+    </div>
+
+    <div class="property">
+      <h2>4. Potência de um produto</h2>
+      <p>\( (ab)^n = a^n \cdot b^n \)</p>
+      <p>Exemplo: \( (2 \cdot 3)^4 = 2^4 \cdot 3^4 = 1296 \)</p>
+    </div>
+
+    <div class="property">
+      <h2>5. Potência de um quociente</h2>
+      <p>\( \left(\frac{a}{b}\right)^n = \frac{a^n}{b^n} \), com \( b \neq 0 \)</p>
+      <p>Exemplo: \( \left(\frac{2}{5}\right)^3 = \frac{8}{125} \)</p>
+    </div>
+
+    <div class="property">
+      <h2>6. Expoente zero</h2>
+      <p>\( a^0 = 1 \), com \( a \neq 0 \)</p>
+      <p>Exemplo: \( 7^0 = 1 \)</p>
+    </div>
+
+    <div class="property">
+      <h2>7. Expoente negativo</h2>
+      <p>\( a^{-n} = \frac{1}{a^n} \), com \( a \neq 0 \)</p>
+      <p>Exemplo: \( 2^{-3} = \frac{1}{8} \)</p>
+    </div>
+
+    <div class="property">
+      <h2>8. Expoente fracionário</h2>
+      <p>\( a^{\frac{1}{n}} = \sqrt[n]{a} \)</p>
+      <p>\( a^{\frac{m}{n}} = \sqrt[n]{a^m} \)</p>
+      <p>Exemplos: \( 16^{\frac{1}{2}} = 4 \), \( 8^{\frac{2}{3}} = 4 \)</p>
+    </div>
+
+    <div class="property">
+      <h2>9. Potência com base negativa</h2>
+      <p>Se o expoente for par: resultado positivo. Se for ímpar: resultado negativo.</p>
+      <p>Exemplo: \( (-2)^4 = 16 \), \( (-2)^3 = -8 \)</p>
+      <p>Atenção: \( -2^4 = -16 \neq (-2)^4 = 16 \)</p>
+    </div>
+
+    <div class="property">
+      <h2>10. Potências de 10</h2>
+      <p>Exemplos: \( 10^3 = 1000 \), \( 10^{-2} = 0{,}01 \)</p>
+    </div>
+
+    <div class="property">
+      <h2>11. Notação científica</h2>
+      <p>\( N = a \cdot 10^n \), com \( 1 \leq |a| &lt; 10 \)</p>
+      <p>Exemplos: \( 3000000 = 3 \cdot 10^6 \), \( 0{,}00042 = 4{,}2 \cdot 10^{-4} \)</p>
+    </div>
+
+    <div class="property">
+      <h2>12. Crescimento exponencial</h2>
+      <p>Funções da forma \( f(x) = a^x \) representam crescimento ou decaimento.</p>
+      <p>Exemplos: crescimento populacional, juros compostos, decaimento radioativo.</p>
+    </div>
+  </section>
+</body>
+</html>
