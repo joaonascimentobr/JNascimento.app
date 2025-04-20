@@ -4,10 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebDesign</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6fb;
+            color: #222;
+            margin: 0;
+            padding: 0 0 40px 0;
+        }
+        h1 {
+            color: #2a4d69;
+            text-align: center;
+            margin-top: 32px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        h3, h4 {
+            color: #4b86b4;
+            margin-left: 10vw;
+            margin-top: 24px;
+        }
+        ol, ul {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+            padding: 18px 32px 18px 40px;
+            margin: 18px auto 24px auto;
+            max-width: 700px;
+        }
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        a {
+            color: #20639b;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #173f5f;
+            text-decoration: underline;
+        }
+        strong {
+            color: #173f5f;
+        }
+        /* Nested lists */
+        ol > ol, ul > ul {
+            background: #f0f4fa;
+            margin: 10px 0 10px 20px;
+            padding: 10px 20px;
+            box-shadow: none;
+        }
+        /* Playlist link */
+        a[href*="youtube"] {
+            display: block;
+            text-align: center;
+            margin: 24px auto 0 auto;
+            font-weight: bold;
+            background: #2a4d69;
+            color: #fff !important;
+            padding: 10px 0;
+            border-radius: 6px;
+            max-width: 420px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+        }
+        /* Section titles */
+        h1:not(:first-child) {
+            margin-top: 40px;
+            color: #173f5f;
+            font-size: 1.7em;
+        }
+        @media (max-width: 600px) {
+            ol, ul {
+                padding: 12px 10px 12px 18px;
+                max-width: 98vw;
+            }
+            h3, h4 {
+                margin-left: 4vw;
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>Desafios</h1>
-    <h3>Salvem os desafios no Github com o nome(e não o número) do que se referem</h3>
+    <h3>Salvem os desafios no Github </h3>
     <h4>Desafios HTML</h5>
     <ol>
         <li><a href="https://docs.google.com/document/d/1XYnA80-AljADu7HmOh8jbf7e9rw1_2RTL7cnovutEck/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Formatação Textual</a></li>
