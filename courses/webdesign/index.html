@@ -4,149 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebDesign</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f4f6fb;
-            color: #222;
-            margin: 0;
-            padding: 0 0 40px 0;
-        }
-        h1 {
-            color: #2a4d69;
-            text-align: center;
-            margin-top: 32px;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-        h3, h4 {
-            color: #4b86b4;
-            margin-left: 10vw;
-            margin-top: 24px;
-        }
-        ol, ul {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
-            padding: 18px 32px 18px 40px;
-            margin: 18px auto 24px auto;
-            max-width: 700px;
-        }
-        li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-        a {
-            color: #20639b;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        a:hover {
-            color: #173f5f;
-            text-decoration: underline;
-        }
-        strong {
-            color: #173f5f;
-        }
-        /* Nested lists */
-        ol > ol, ul > ul {
-            background: #f0f4fa;
-            margin: 10px 0 10px 20px;
-            padding: 10px 20px;
-            box-shadow: none;
-        }
-        /* Playlist link */
-        a[href*="youtube"] {
-            display: block;
-            text-align: center;
-            margin: 24px auto 0 auto;
-            font-weight: bold;
-            background: #2a4d69;
-            color: #fff !important;
-            padding: 10px 0;
-            border-radius: 6px;
-            max-width: 420px;
-            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
-        }
-        /* Section titles */
-        h1:not(:first-child) {
-            margin-top: 40px;
-            color: #173f5f;
-            font-size: 1.7em;
-        }
-        @media (max-width: 600px) {
-            ol, ul {
-                padding: 12px 10px 12px 18px;
-                max-width: 98vw;
-            }
-            h3, h4 {
-                margin-left: 4vw;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="webdesign.css">
 </head>
 <body>
-    <h1>Desafios</h1>
-    <h3>Salvem os desafios no Github </h3>
-    <h4>Desafios HTML</h5>
-    <ol>
-        <li><a href="https://docs.google.com/document/d/1XYnA80-AljADu7HmOh8jbf7e9rw1_2RTL7cnovutEck/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Formatação Textual</a></li>
-        <li><a href="https://docs.google.com/document/d/143V3xbMze8AgSSinczgNnQ8ECzrTi7DZQ5rTcwLpOfA/edit#heading=h.vcfrtpdfvrr" target="_blank" rel="noopener noreferrer">Criar tabelas</a></li>
-        <li>Num arquivo com nome: <strong> "index.html" </strong>, crie uma lista com o nome dos desafios e links para eles</li>
-        <li><a href="https://www.alura.com.br/artigos/como-colocar-projeto-no-ar-com-github-pages?srsltid=AfmBOooknXAcZkdcThD3lh2VuQkab-LFfZ6AAgSySP3wCuDu8QniLivc" target="_blank" rel="noopener noreferrer">Coloque seu site no ar</a></li>
-        <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" target="_blank" rel="noopener noreferrer">Inserir imagens</a></li>
-        <li><a href="https://docs.google.com/document/d/1wQwdrqRSZSxoWgwI6Rq5fcQOM1YImCpjxTdVVNyQS9o/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Criar formulário</a></li>
-    </ol>
-
-    <h4>CSS</h4>
-
-    <ol>
-        <li><a target="_blank" href="https://www.hostinger.com.br/tutoriais/o-que-e-css-guia-basico-de-css">O que é CSS</a></li>
-        <li><a target="_blank" href="./games/index.html" target="_blank" rel="noopener noreferrer">Para aprender Flexbox</a></li>
-        <li><a target="_blank" href="./games/gridgarden.html" target="_blank" rel="noopener noreferrer">Para aprender CSS Grid</a></li>
-        <li><a target="_blank" href="https://www.dio.me/articles/flexbox-vs-grid-escolhendo-a-melhor-abordagem-para-layouts-web-modernos" target="_blank" rel="noopener noreferrer">Flexbox vs. Grid: Escolhendo a Melhor Abordagem para Layouts Web Modernos</a></li>
-        <ol>
-            <li>Flexbox</li>
+    <header>
+        <nav>
+            <a href="../../index.html" class="voltar">&larr; Voltar</a>
+        </nav>
+        <h1>WebDesign</h1>
+        <p class="descricao">Recursos, desafios e referências para aprender e praticar HTML e CSS.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Desafios</h2>
+            <h3>Salvem os desafios no Github</h3>
+            <h4>Desafios HTML</h4>
             <ol>
-                <li><a href="https://origamid.com/projetos/flexbox-guia-completo/" target="_blank" rel="noopener noreferrer">Guia sobre flexbox</a></li>
-                <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener noreferrer">Mergulhando em FlexBox</a></li>
+                <li><a href="https://docs.google.com/document/d/1XYnA80-AljADu7HmOh8jbf7e9rw1_2RTL7cnovutEck/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Formatação Textual</a></li>
+                <li><a href="https://docs.google.com/document/d/143V3xbMze8AgSSinczgNnQ8ECzrTi7DZQ5rTcwLpOfA/edit#heading=h.vcfrtpdfvrr" target="_blank" rel="noopener noreferrer">Criar tabelas</a></li>
+                <li>Num arquivo com nome: <strong> "index.html" </strong>, crie uma lista com o nome dos desafios e links para eles</li>
+                <li><a href="https://www.alura.com.br/artigos/como-colocar-projeto-no-ar-com-github-pages?srsltid=AfmBOooknXAcZkdcThD3lh2VuQkab-LFfZ6AAgSySP3wCuDu8QniLivc" target="_blank" rel="noopener noreferrer">Coloque seu site no ar</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" target="_blank" rel="noopener noreferrer">Inserir imagens</a></li>
+                <li><a href="https://docs.google.com/document/d/1wQwdrqRSZSxoWgwI6Rq5fcQOM1YImCpjxTdVVNyQS9o/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Criar formulário</a></li>
             </ol>
-        </ol>
-        
-    </ol>
-
-    <h4>Tutoriais</h4>
-
-    <ol>
-        <li><a href="https://drive.google.com/file/d/1P3oirUoNCMucbBm21H2XzESYsZR1vFZI/view?usp=drive_link">Login</a></li>
-        <li><a href="https://www.freecodecamp.org/portuguese/news/como-criar-uma-barra-de-navegacao-responsiva-com-um-menu-de-sanduiche-usando-flexbox/" target="_blank" rel="noopener noreferrer">Como criar uma barra de navegação responsiva com um menu de sanduíche usando Flexbox</a></li>
-        <li>Clonar a página Google.com</li>
-        <li><a href="">Criar uma landpage sobre si mesmo afim de divulgar os serviços de TI que poderão prover com os cursos estudados.</a></li>
-    </ol>
-
-    <a href="https://www.youtube.com/watch?v=JDI0zz2Waqw&list=PLNCevxogE3fjFTYBst-r1gvlCMsUSzjEU&index=1">playlist de desenhos feitos em html e css</a>
-
-
-    <h1>Onde praticar</h1>
-    <ul>
-        <li><a href="https://codepen.io/pen/" target="_blank" rel="noopener noreferrer">Code pen</a></li>
-        <li><a href="https://idx.dev" target="_blank" rel="noopener noreferrer">IDX</a></li>
-    </ul>
-
-    <h1>Referências HTML e CSS</h1>
-    <ul>
-        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">Guia HTML</a></li>
-        <ul><li><a href="https://www.seoptimer.com/br/blog/visao-do-usuario/" target="_blank" rel="noopener noreferrer">Viewport</a></li></ul>
-        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">Guia CSS</a>
+            <h4>CSS</h4>
+            <ol>
+                <li><a target="_blank" href="https://www.hostinger.com.br/tutoriais/o-que-e-css-guia-basico-de-css">O que é CSS</a></li>
+                <li><a target="_blank" href="./games/index.html" rel="noopener noreferrer">Para aprender Flexbox</a></li>
+                <li><a target="_blank" href="./games/gridgarden.html" rel="noopener noreferrer">Para aprender CSS Grid</a></li>
+                <li><a target="_blank" href="https://www.dio.me/articles/flexbox-vs-grid-escolhendo-a-melhor-abordagem-para-layouts-web-modernos" rel="noopener noreferrer">Flexbox vs. Grid: Escolhendo a Melhor Abordagem para Layouts Web Modernos</a></li>
+                <ol>
+                    <li>Flexbox</li>
+                    <ol>
+                        <li><a href="https://origamid.com/projetos/flexbox-guia-completo/" target="_blank" rel="noopener noreferrer">Guia sobre flexbox</a></li>
+                        <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener noreferrer">Mergulhando em FlexBox</a></li>
+                    </ol>
+                </ol>
+            </ol>
+        </section>
+        <section>
+            <h2>Tutoriais</h2>
+            <ol>
+                <li><a href="https://drive.google.com/file/d/1P3oirUoNCMucbBm21H2XzESYsZR1vFZI/view?usp=drive_link">Login</a></li>
+                <li><a href="https://www.freecodecamp.org/portuguese/news/como-criar-uma-barra-de-navegacao-responsiva-com-um-menu-de-sanduiche-usando-flexbox/" target="_blank" rel="noopener noreferrer">Como criar uma barra de navegação responsiva com um menu de sanduíche usando Flexbox</a></li>
+                <li>Clonar a página Google.com</li>
+                <li><a href="">Criar uma landpage sobre si mesmo afim de divulgar os serviços de TI que poderão prover com os cursos estudados.</a></li>
+            </ol>
+        </section>
+        <section>
+            <h2>Protótipos</h2>
+            <ol>
+                <li><a href="https://www.figma.com/community/file/1097399178760561463">Instagram</a></li>
+                <li><a href="https://www.figma.com/community/file/874576344344319149/whatsapp-ui-screens">WhatsApp</a></li>
+                <li><a href="https://www.figma.com/community/file/1283108627986827017/spotify-clone">Spotify</a></li>
+                <li><a href="https://www.figma.com/community/file/1221123805741231777">AirBnB</a></li>
+                <li><a href="https://www.figma.com/community/file/1033579035431127457">Zomato</a></li>
+                <li><a href="https://www.figma.com/community/file/1165352571580063620">Coinbase</a></li>
+                <li><a href="https://www.figma.com/community/file/1313396306632662786/app-clone-nike-app-full-version">Nike</a></li>
+                <li><a href="https://www.figma.com/community/file/1056841682917412245">Netflix</a></li>
+            </ol>
+        </section>
+        <a class="playlist" href="https://www.youtube.com/watch?v=JDI0zz2Waqw&list=PLNCevxogE3fjFTYBst-r1gvlCMsUSzjEU&index=1">Playlist de desenhos feitos em HTML e CSS</a>
+        <section>
+            <h2>Onde praticar</h2>
             <ul>
-                <li><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/CSS" target="_blank">CSS</a></li>
-                <li><a href="https://docs.google.com/document/d/1e3cOuo72e39yOMHwGFJxknKtaalldHgDFDRhtysCDjM/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Conceitos</a></li>
-                <li><a href="https://www.hostinger.com.br/tutoriais/diferenca-entre-estilos-css" target="_blank" rel="noopener noreferrer">Diferença entre inline, interno ou externo</a></li>
-                <li><a href="https://github.com/MilenaCarecho/30diasDeCSS?tab=readme-ov-file#id02" target="_blank" rel="noopener noreferrer">30 Dias de CSS</a></li>
+                <li><a href="https://codepen.io/pen/" target="_blank" rel="noopener noreferrer">Code pen</a></li>
+                <li><a href="https://idx.dev" target="_blank" rel="noopener noreferrer">IDX</a></li>
             </ul>
-        </li>
-        <li><a href="/courses/webdesign/html-css-cheat-sheet-master/html-css-cheat-sheet.html" target="_blank">Acervo</a></li>
-        <li><a target="_blank" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Playlist Guanabara - Youtube</a></li>
-    </ul>
+        </section>
+        <section>
+            <h2>Referências HTML e CSS</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">Guia HTML</a>
+                    <ul>
+                        <li><a href="https://www.seoptimer.com/br/blog/visao-do-usuario/" target="_blank" rel="noopener noreferrer">Viewport</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">Guia CSS</a>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/CSS" target="_blank">CSS</a></li>
+                        <li><a href="https://docs.google.com/document/d/1e3cOuo72e39yOMHwGFJxknKtaalldHgDFDRhtysCDjM/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Conceitos</a></li>
+                        <li><a href="https://www.hostinger.com.br/tutoriais/diferenca-entre-estilos-css" target="_blank" rel="noopener noreferrer">Diferença entre inline, interno ou externo</a></li>
+                        <li><a href="https://github.com/MilenaCarecho/30diasDeCSS?tab=readme-ov-file#id02" target="_blank" rel="noopener noreferrer">30 Dias de CSS</a></li>
+                    </ul>
+                </li>
+                <li><a href="/courses/webdesign/html-css-cheat-sheet-master/html-css-cheat-sheet.html" target="_blank">Acervo</a></li>
+                <li><a target="_blank" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">Playlist Guanabara - Youtube</a></li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
